@@ -31,7 +31,6 @@ dependencies {
     implementation 'app.just.common:common-app:1.6-SNAPSHOT'
     implementation 'org.postgresql:postgresql'
     implementation 'org.flywaydb:flyway-core'
-    implementation 'org.projectlombok:lombok:1.18.22'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     implementation 'org.mapstruct:mapstruct:1.5.2.Final'

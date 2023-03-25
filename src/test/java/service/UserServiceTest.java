@@ -7,8 +7,6 @@ import app.just.actionstorage.serivce.UserService;
 import app.just.common.dto.UserDto;
 import domain.UserDtoFixture;
 import domain.UserEntityFixture;
-import lombok.AccessLevel;
-import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -21,7 +19,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-@FieldDefaults(level = AccessLevel.PACKAGE)
 public class UserServiceTest {
 
   @Mock
@@ -32,7 +29,8 @@ public class UserServiceTest {
   UserService userService;
 
   @Test
-  void findAll() {
+  void givenListOfUserEntities_whenGetAllUserEntities_thenReturnUserEntities() {
+
     UserEntity userEntity = UserEntityFixture.createUserEntity();
     List<UserEntity> userEntities = List.of(userEntity);
 
